@@ -1,0 +1,4 @@
+Keel Spill Check (comfyui-keel-spillcheck)
+Copyright 2026 [COPYRIGHT HOLDER NAME: to be filled in by the owner before publishing]
+
+The weights in weights/keel_m1.pt were trained on synthetic scenes and on edits made by code to photographs from Wikimedia Commons marked CC0 or public domain.

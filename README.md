@@ -82,5 +82,9 @@ It only checks for unwanted change outside the region. It does **not** judge whe
 
 ## Provenance
 
-The network was trained by the author on synthetic cartoon scenes plus edits made to CC0 photographs, with no third-party model weights.
-The code in `keel_core/` is copied from the author's research repository. **Licence: not yet chosen.** Do not redistribute until a licence file is added.
+The network was trained by the author on synthetic cartoon scenes plus edits made by code to photographs from Wikimedia Commons that are marked CC0 or public domain, with no third-party model weights and no AI-generated training images.
+The code in `keel_core/` is copied from the author's research repository.
+
+## Licence
+
+Apache License 2.0 (see `LICENSE` and `NOTICE`).
