@@ -38,8 +38,9 @@ Copy or clone this folder into `ComfyUI/custom_nodes/comfyui-keel-spillcheck/`, 
 environment (it needs `opencv-python-headless`; `torch` and `numpy` come with ComfyUI), and restart ComfyUI.
 Wire: `Load Image` (original) and your edited output → **Keel Spill Check**; optionally a mask for the allowed region.
 
-**Not yet tested inside a running ComfyUI.** The node follows ComfyUI's conventions and was tested through its class with ComfyUI-style tensors
-(`tests/check_equivalence.py`: identical results to the research code on 48 images in all three modes), but I have not loaded it in the ComfyUI UI.
+**Tested:** loaded and executed in a real ComfyUI 0.39.0 (CPU, API workflow: two Load Image nodes, a mask built with Solid Mask + Mask Composite, this node, Preview Image; status success, node listed under `image/quality`). Also tested through its class with ComfyUI-style tensors
+(`tests/check_equivalence.py`: identical results to the research code on 48 images in all three modes). **Not tested:** the ComfyUI web UI itself, the `cuda` device option, Windows, or other ComfyUI versions.
+Note: a stock ComfyUI environment may not have OpenCV; install it with `pip install -r requirements.txt` (the load test needed this).
 If it fails to load, please open an issue with the console log.
 
 ## How well it works (honest numbers)
