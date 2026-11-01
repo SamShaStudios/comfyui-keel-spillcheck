@@ -69,7 +69,7 @@ ChatGPT regenerates the whole image, and the network flags the re-rendering. A f
 
 Other known limits:
 - **Brightness/tint edits** (e.g. "brighten the top-left quarter"): nearly every output gets flagged, including ones a person calls clean. The soft edge of such edits is ambiguous.
-- **Object edits on Qwen** (add a balloon): there were only 6 problem cases and the checker caught none; it is not shown to work for those.
+- **Object edits** (add a balloon or sticker): in the first-round data (Qwen plus a few ChatGPT outputs, 60 object-edit outputs) only 6 were labelled as problems and the checker caught none of them; it is not shown to work for those.
 - Non-box masks use their bounding box. Only box regions were evaluated.
 - 24 photos, one labeller, one run per cell. Intervals are wide. The labeller changed the label on 25% of the control pairs on a later review.
 
