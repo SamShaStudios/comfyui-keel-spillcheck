@@ -32,6 +32,16 @@ Modes:
 - `keel_v2` — the rule above plus a small learned change detector (1.9M parameters, included in `weights/`) that finds local changes outside the region.
 - `mask_gate` — flags only when the `keel_v2` result **and** a pixel-difference rule both fire (fewer false alarms, fewer catches).
 
+## Quick start (two minutes)
+
+1. Put this folder in `ComfyUI/custom_nodes/`, run `pip install -r requirements.txt` in ComfyUI's Python environment, restart ComfyUI.
+2. Copy the three files in `examples/` into `ComfyUI/input/`.
+3. In ComfyUI, drag in `workflows/keel_spillcheck_example.json` and press **Queue**. You should see an overlay image and a report ending in `ok`.
+4. Click the right-hand Load Image's picker, choose `keel_example_edit_spill.png`, and Queue again. The report now says `SPILL`, and the overlay turns red.
+5. For your own images, use `workflows/keel_spillcheck_your_images.json`: load the original and the edited result, right-click the original, **Open in MaskEditor**, paint the area the edit was allowed to change, save, and Queue.
+
+The workflow files were checked in a script (their node settings run correctly in ComfyUI 0.39.0 through the API, with the example images giving `ok` and `SPILL` as above). **They have not been opened in the ComfyUI web UI**, so if a node looks wrong or a link is missing when you load one, please open an issue.
+
 ## Install
 
 Copy or clone this folder into `ComfyUI/custom_nodes/comfyui-keel-spillcheck/`, install `requirements.txt` into ComfyUI's Python
