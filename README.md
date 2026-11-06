@@ -1,5 +1,7 @@
 # Keel Spill Check (ComfyUI custom node) — research prototype
 
+> **Status: archived on 2026-11-06 and not developed further.** No outside use appeared in the first five days, and on review the author did not find a use for it in their own image-generation workflow. It works as described below and is left here read-only for reference. What was learned: a plain mean-colour-shift rule did most of the work on Qwen-Image edits (catch 0.75, false alarm 0.05 against 0.85 / 0.07 for the full checker), and the checker is not usable on ChatGPT-image edits (0.63 false-alarm rate).
+
 Checks whether an image edit changed things **outside the region it was supposed to change**.
 
 You give it the original image, the edited image, and a mask of the region the edit was allowed to touch. It tells you
